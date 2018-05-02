@@ -23,7 +23,7 @@ TEST(TicTacToeBoardTest, sanityCheck)
 
 TEST(TicTacToeBoardTest, goodPlacement) {
 	TicTacToeBoard testB;
-	ASSERT_FALSE(testB.placePiece(1, 1) != '?');
+	ASSERT_TRUE(testB.placePiece(1, 1) == 'X');
 }
 
 TEST(TicTacToeBoardTest, badPlacement) {
@@ -39,11 +39,6 @@ TEST(TicTacToeBoardTest, toggleTurn) {
 TEST(TicTacToeBoardTest, getWinner) {
 	TicTacToeBoard testB;
 	ASSERT_TRUE(testB.getWinner());
-}
-
-TEST(TicTacToeBoardTest, validGetPiece) {
-	TicTacToeBoard testB;
-	ASSERT_FALSE(testB.getPiece(1, 1) != '?');
 }
 
 TEST(TicTacToeBoardTest, invalidGetPiece) {
